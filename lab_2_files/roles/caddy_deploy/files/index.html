@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>WELCOME TO MY AWESOME WEBSITE</title>
+    <style>
+        body {
+            background: url('https://www.toptal.com/designers/subtlepatterns/patterns/bright_squares.png');
+            color: #00FF00;
+            font-family: "Comic Sans MS", cursive, sans-serif;
+            text-align: center;
+            animation: bgColorChange 2s infinite alternate;
+        }
+
+        h1 {
+            font-size: 50px;
+            color: #FF00FF;
+            animation: rainbowText 1s infinite alternate;
+            text-shadow: 2px 2px 5px yellow;
+        }
+
+        a {
+            font-size: 20px;
+            color: red;
+            text-decoration: underline;
+            animation: blink 0.5s infinite;
+        }
+
+        img {
+            width: 100px;
+            height: 100px;
+            animation: spin 3s linear infinite;
+        }
+
+        @keyframes spin {
+            from {
+                transform: rotate(0deg);
+            }
+            to {
+                transform: rotate(360deg);
+            }
+        }
+
+        @keyframes blink {
+            0%, 100% {
+                opacity: 1;
+            }
+            50% {
+                opacity: 0;
+            }
+        }
+
+        @keyframes bgColorChange {
+            0% {
+                background-color: #FF0000;
+            }
+            25% {
+                background-color: #00FF00;
+            }
+            50% {
+                background-color: #0000FF;
+            }
+            75% {
+                background-color: #FFFF00;
+            }
+            100% {
+                background-color: #FF00FF;
+            }
+        }
+
+        @keyframes rainbowText {
+            0% {
+                color: red;
+            }
+            20% {
+                color: orange;
+            }
+            40% {
+                color: yellow;
+            }
+            60% {
+                color: green;
+            }
+            80% {
+                color: blue;
+            }
+            100% {
+                color: violet;
+            }
+        }
+
+        marquee {
+            font-size: 30px;
+            color: yellow;
+        }
+    </style>
+</head>
+<body>
+    <h1>WELCOME TO MY WEBSITE!!!</h1>
+    <marquee behavior="scroll" direction="left">This is the best site EVER!!! 🌟✨🌟</marquee>
+    <p><strong>Click below for an AMAZING SURPRISE:</strong></p>
+    <a href="https://example.com" target="_blank">Surprise Link</a>
+    <p>Here's a dancing GIF for you:</p>
+    <img src="https://media.giphy.com/media/3o7aD2saalBwwftBIY/giphy.gif" alt="Dancing GIF">
+    <p><marquee behavior="alternate" direction="up" height="50">DON'T FORGET TO SIGN MY GUESTBOOK!!! 😎</marquee></p>
+</body>
+</html>
+

@@ -1,0 +1,29 @@
+---
+- name: Task_1
+  hosts: localhost
+  tasks:
+    - name: Create file
+      ansible.builtin.shell: echo "test_file_content" > "$HOME/test.txt"
+      args:
+        executable: /bin/bash
+
+    - name: Edit
+      ansible.builtin.shell: echo "new_file_content" > "$HOME/test.txt"
+      args:
+        executable: /bin/bash
+
+    - name: Show new content
+      ansible.builtin.shell: cat "$HOME/test.txt"
+      args:
+        executable: /bin/bash
+      register: file_content
+
+    - name: Print
+      ansible.builtin.debug:
+        msg: "New file content: {{ file_content.stdout }}"
+
+    - name: Delete file
+      ansible.builtin.file:
+        path: "$HOME/test.txt"
+        state: absent
+
